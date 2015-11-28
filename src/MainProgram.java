@@ -20,7 +20,7 @@ public class MainProgram {
 
 		Texture t = new Texture();
 		try {
-			t.loadFromFile(Paths.get("Pics/Ash_Sprite.jpg"), new IntRect(0, 10,
+			t.loadFromFile(Paths.get("Pics/Human/Ash_Sprite.jpg"), new IntRect(0, 10,
 					16, 26));
 			System.out.println(t.getSize().x + " " + t.getSize().y);
 			t.setSmooth(true);
