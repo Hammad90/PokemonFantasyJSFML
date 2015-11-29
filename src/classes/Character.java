@@ -47,9 +47,11 @@ public abstract class Character {
 		return window;
 	}
 	
-	public void setMovingBehavior(MovingBehavior movingBehavior){
-		this.movingBehavior = movingBehavior;
+	public void setMovingBehavior(MovingBehavior mBehavior){
+		movingBehavior = mBehavior;
 	}
 	
-	
+	public MovingBehavior getMovingBehavior(){
+		return movingBehavior;
+	}
 }

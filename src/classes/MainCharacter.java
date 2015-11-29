@@ -23,6 +23,8 @@ public class MainCharacter extends Character{
 			break;
 		case RIGHT:
 			break;
+		default:
+			break;
 		}
 	}
 }
