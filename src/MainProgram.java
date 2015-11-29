@@ -14,40 +14,52 @@ public class MainProgram {
 
 	public static void main(String[] args) {
 
+		
+		
 		RenderWindow window = new RenderWindow(new VideoMode(800, 600), "Hello");
 
 		window.setFramerateLimit(30);
-
-		Texture t = new Texture();
-		try {
-			t.loadFromFile(Paths.get("Pics/Human/Ash_Sprite.jpg"), new IntRect(0, 10,
-					16, 26));
-			System.out.println(t.getSize().x + " " + t.getSize().y);
-			t.setSmooth(true);
-		} catch (IOException ioex) {
-			System.out.println(ioex.getMessage());
-		}
-
-		Sprite s = new Sprite(t);
-		s.setPosition(0, 0);
-		s.setScale(3.5f, 3.5f);
-
-		while (window.isOpen()) {
-			for (Event e : window.pollEvents()) {
-				if (e.type == Event.Type.CLOSED) {
-					window.close();
-				}
-				if (e.type == Event.Type.KEY_PRESSED) {
-					KeyEvent key = e.asKeyEvent();
-					if (key.key == Key.ESCAPE) {
-						window.close();
-					}
-
-				}
-				window.clear();
-				window.draw(s);
-				window.display();
+		//Initialize game objects
+		while(window.isOpen()){
+			//Events
+			for(Event e:window.pollEvents()){
+				
 			}
+			//Draw Scene
+			
+			//Update display
 		}
-	}
+//
+//		Texture t = new Texture();
+//		try {
+//			t.loadFromFile(Paths.get("Pics/Human/Ash_Sprite.jpg"), new IntRect(0, 10,
+//					16, 26));
+//			System.out.println(t.getSize().x + " " + t.getSize().y);
+//			t.setSmooth(true);
+//		} catch (IOException ioex) {
+//			System.out.println(ioex.getMessage());
+//		}
+//
+//		Sprite s = new Sprite(t);
+//		s.setPosition(0, 0);
+//		s.setScale(3.5f, 3.5f);
+//
+//		while (window.isOpen()) {
+//			for (Event e : window.pollEvents()) {
+//				if (e.type == Event.Type.CLOSED) {
+//					window.close();
+//				}
+//				if (e.type == Event.Type.KEY_PRESSED) {
+//					KeyEvent key = e.asKeyEvent();
+//					if (key.key == Key.ESCAPE) {
+//						window.close();
+//					}
+//
+//				}
+//				window.clear();
+//				window.draw(s);
+//				window.display();
+//			}
+//		}
+//	}
 }
