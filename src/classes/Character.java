@@ -22,8 +22,9 @@ public abstract class Character {
 
 	public void setSprite(String texturePath, IntRect textureRectangle) {
 		try {
+			characterTexture = new Texture();
 			characterTexture.loadFromFile(Paths.get(texturePath));
-			characterSprite.setTexture(characterTexture);
+			characterSprite = new Sprite(characterTexture);
 			characterSprite.setTextureRect(textureRectangle);
 		} catch (IOException exception) {
 			System.out
@@ -37,6 +38,10 @@ public abstract class Character {
 
 	public void setPosition(Vector2f pos) {
 		characterPosition = pos;
+		characterSprite.setPosition(pos);
+	}
+	public void move(Vector2f displacement){
+		characterSprite.move(displacement);
 	}
 
 	public Vector2f getPosition() {
@@ -53,5 +58,12 @@ public abstract class Character {
 	
 	public MovingBehavior getMovingBehavior(){
 		return movingBehavior;
+	}
+	
+	public void draw(){
+		window.draw(this.characterSprite);
+	}
+	public void setScale(float width, float height){
+		characterSprite.setScale(width, height);
 	}
 }

@@ -11,7 +11,8 @@ public class MainCharacter extends Character{
 		super(window);
 		setSprite("Pics/Human/Ash_Sprite.jpg", new IntRect(0, 10, 16, 26));
 		Vector2i windowSize = window.getSize();
-		setPosition(new Vector2f(windowSize.x/2, windowSize.y/2));
+		setScale(3, 3);
+		setPosition(new Vector2f(windowSize.x/2-24, windowSize.y/2-24));
 	}
 	public void move(Key keyPressed){
 		switch(keyPressed){
